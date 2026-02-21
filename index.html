@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyce's Daily Wins</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; display: flex; justify-content: center; padding: 20px; }
+        .card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+        h2 { color: #2c3e50; text-align: center; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .habit-item { display: flex; align-items: center; margin: 15px 0; padding: 10px; border-radius: 8px; transition: 0.3s; cursor: pointer; border: 1px solid #eee; }
+        .habit-item:hover { background: #f0fdf4; }
+        input[type="checkbox"] { transform: scale(1.5); margin-right: 15px; }
+        .completed { text-decoration: line-through; color: #a0aec0; background: #f0fdf4 !important; }
+        .quote { font-style: italic; font-size: 0.9rem; color: #718096; text-align: center; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Daily Clarity Wins</h2>
+    
+    <div class="habit-item" onclick="toggle(this)">
+        <input type="checkbox"> <span>🙏 The Seed (Prayer/Verse)</span>
+    </div>
+
+    <div class="habit-item" onclick="toggle(this)">
+        <input type="checkbox"> <span>🩺 The Deep Dive (1 Study Topic)</span>
+    </div>
+
+    <div class="habit-item" onclick="toggle(this)">
+        <input type="checkbox"> <span>🏃 The Temple (Walk/Rest)</span>
+    </div>
+
+    <div class="habit-item" onclick="toggle(this)">
+        <input type="checkbox"> <span>✨ The Pivot (Positive Talk)</span>
+    </div>
+
+    <div class="habit-item" onclick="toggle(this)" style="border: 2px solid #48bb78;">
+        <input type="checkbox"> <span>🏁 **The Big Finish** (Completed 1 Thing)</span>
+    </div>
+
+    <div class="quote">
+        "Commit your work to the Lord, and your plans will succeed." <br>— Proverbs 16:3
+    </div>
+</div>
+
+<script>
+    // Simple function to toggle the completion style
+    function toggle(element) {
+        const checkbox = element.querySelector('input');
+        checkbox.checked = !checkbox.checked;
+        element.classList.toggle('completed');
+    }
+</script>
+
+</body>
+</html>
